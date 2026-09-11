@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>写真ギャラリー｜常盤少年野球クラブ</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",
+  "Yu Gothic",sans-serif;
+  background:#07152f;
+  color:#fff;
+  line-height:1.7;
+}
+
+header{
+  padding:55px 20px 45px;
+  text-align:center;
+  background:linear-gradient(145deg,#07152f,#102b58);
+  border-bottom:2px solid #c9a227;
+}
+
+.logo{
+  color:#d7b84b;
+  font-size:14px;
+  letter-spacing:3px;
+  font-weight:bold;
+}
+
+h1{
+  margin:10px 0;
+  font-size:30px;
+}
+
+.subtitle{
+  color:#ddd;
+  font-size:14px;
+}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:#061126;
+  border-bottom:1px solid #26395e;
+  text-align:center;
+  padding:10px 5px;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-size:12px;
+  margin:0 7px;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:40px 18px 70px;
+}
+
+.intro{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.intro h2{
+  color:#d7b84b;
+  font-size:25px;
+  margin-bottom:8px;
+}
+
+.intro p{
+  color:#ddd;
+  font-size:14px;
+}
+
+.notice{
+  background:#102244;
+  border:1px solid #d7b84b;
+  border-radius:15px;
+  padding:25px 20px;
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.notice h3{
+  color:#d7b84b;
+  margin-top:0;
+}
+
+.notice p{
+  color:#ddd;
+  font-size:14px;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.photo{
+  min-height:170px;
+  border:1px solid #2b426b;
+  border-radius:12px;
+  background:linear-gradient(145deg,#102244,#0b1a35);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+}
+
+.photo span{
+  color:#aaa;
+  font-size:13px;
+}
+
+.photo strong{
+  display:block;
+  color:#d7b84b;
+  font-size:16px;
+  margin-bottom:5px;
+}
+
+.back{
+  display:block;
+  width:max-content;
+  margin:40px auto 0;
+  padding:11px 25px;
+  border:1px solid #d7b84b;
+  border-radius:30px;
+  color:#fff;
+  text-decoration:none;
+}
+
+footer{
+  text-align:center;
+  padding:30px 15px;
+  background:#040b1b;
+  color:#aaa;
+  font-size:12px;
+}
+
+@media(max-width:600px){
+  .gallery{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .photo{
+    min-height:145px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">TOKIWA BASEBALL CLUB</div>
+  <h1>写真ギャラリー</h1>
+  <div class="subtitle">創立50周年記念大会</div>
+</header>
+
+<nav>
+  <a href="index.html">ホーム</a>
+  <a href="history.html">50年の歴史</a>
+  <a href="#gallery">写真</a>
+</nav>
+
+<main class="container">
+
+<section class="intro">
+  <h2>思い出を、次の世代へ。</h2>
+  <p>
+    常盤少年野球クラブの50年の歩み。<br>
+    ここにたくさんの思い出を残していきます。
+  </p>
+</section>
+
+<section class="notice">
+  <h3>📸 50周年記念写真 募集中！</h3>
+  <p>
+    昔の試合、練習、遠征、卒団式、集合写真など、<br>
+    「懐かしい！」と思う写真を募集しています。
+  </p>
+  <p>
+    写真が集まり次第、このページに追加していきます。
+  </p>
+</section>
+
+<section id="gallery" class="gallery">
+
+  <div class="photo">
+    <div>
+      <strong>1970〜80年代</strong>
+      <span>昔の常盤を知る写真を募集中</span>
+    </div>
+  </div>
+
+  <div class="photo">
+    <div>
+      <strong>1990年代</strong>
+      <span>思い出の写真を募集中</span>
+    </div>
+  </div>
+
+  <div class="photo">
+    <div>
+      <strong>2000年代</strong>
+      <span>思い出の写真を募集中</span>
+    </div>
+  </div>
+
+  <div class="photo">
+    <div>
+      <strong>2010年代</strong>
+      <span>思い出の写真を募集中</span>
+    </div>
+  </div>
+
+  <div class="photo">
+    <div>
+      <strong>2020年代</strong>
+      <span>思い出の写真を募集中</span>
+    </div>
+  </div>
+
+  <div class="photo">
+    <div>
+      <strong>50周年記念大会</strong>
+      <span>2027年11月予定</span>
+    </div>
+  </div>
+
+</section>
+
+<a class="back" href="index.html">← トップページへ戻る</a>
+
+</main>
+
+<footer>
+  常盤少年野球クラブ 創立50周年記念大会<br>
+  50年の想いを、次の世代へ。
+</footer>
+
+</body>
+</html>
