@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>大会情報｜常盤少年野球クラブ創立50周年記念大会</title>
 
 <style>
@@ -13,209 +14,258 @@
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
-  background:#f4f5f7;
+  background:#f3f5f8;
   color:#182033;
 }
 
 header{
-  background:linear-gradient(135deg,#07152f,#122957);
+  background:linear-gradient(135deg,#07152f,#142e61);
   color:white;
-  padding:35px 18px 30px;
   text-align:center;
+  padding:32px 15px;
   border-bottom:4px solid #d4af37;
 }
 
 header .small{
-  font-size:13px;
-  letter-spacing:2px;
   color:#d4af37;
-  margin-bottom:8px;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:bold;
 }
 
 header h1{
-  margin:0;
+  margin:8px 0 5px;
   font-size:25px;
-  line-height:1.4;
 }
 
 header p{
-  margin:10px 0 0;
+  margin:0;
   font-size:14px;
 }
 
 nav{
-  background:#fff;
   display:flex;
   overflow-x:auto;
   white-space:nowrap;
-  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  background:white;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
 
 nav a{
+  flex-shrink:0;
+  padding:14px 13px;
   color:#182033;
   text-decoration:none;
-  padding:15px 14px;
   font-size:13px;
   font-weight:bold;
 }
 
-nav a:hover{
-  color:#b08a19;
-}
-
 .container{
-  max-width:900px;
+  max-width:850px;
   margin:auto;
-  padding:25px 15px 50px;
+  padding:22px 14px 50px;
 }
 
 .hero{
-  background:linear-gradient(135deg,#0b1c3d,#17366e);
+  background:linear-gradient(135deg,#0a1b3b,#17366e);
   color:white;
-  border-radius:18px;
-  padding:28px 20px;
   text-align:center;
-  box-shadow:0 8px 25px rgba(0,0,0,.15);
-  margin-bottom:25px;
+  border-radius:18px;
+  padding:25px 15px;
+  margin-bottom:22px;
+  box-shadow:0 7px 20px rgba(0,0,0,.15);
 }
 
 .hero .gold{
   color:#d4af37;
-  font-weight:bold;
   letter-spacing:2px;
+  font-weight:bold;
+  font-size:12px;
 }
 
 .hero h2{
-  margin:10px 0;
+  margin:8px 0;
   font-size:27px;
 }
 
 .hero p{
-  margin:6px 0;
-}
-
-.status{
-  display:inline-block;
-  margin-top:15px;
-  padding:8px 18px;
-  border:1px solid #d4af37;
-  border-radius:30px;
-  color:#fff;
-  font-size:13px;
+  margin:5px 0;
 }
 
 .section{
   background:white;
-  border-radius:15px;
-  padding:22px;
+  border-radius:16px;
+  padding:20px;
   margin-bottom:22px;
-  box-shadow:0 4px 15px rgba(0,0,0,.07);
+  box-shadow:0 4px 14px rgba(0,0,0,.07);
 }
 
 .section h3{
-  margin:0 0 18px;
-  color:#102650;
-  border-left:5px solid #d4af37;
+  margin:0 0 17px;
   padding-left:10px;
-  font-size:20px;
+  border-left:5px solid #d4af37;
+  color:#102650;
 }
 
-.info{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-}
+/* 大会ステータス */
 
-.card{
-  background:#f7f8fa;
+.status{
+  text-align:center;
+  background:#fff9e6;
+  border:1px solid #e0c75a;
   border-radius:12px;
-  padding:17px;
-  border:1px solid #e4e6ea;
+  padding:16px;
+  font-size:14px;
 }
 
-.card .label{
+/* トーナメント */
+
+.tournament-title{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.tournament-title strong{
+  display:block;
+  font-size:20px;
+  color:#102650;
+}
+
+.tournament-title span{
   font-size:12px;
   color:#777;
-  margin-bottom:6px;
 }
 
-.card .value{
+.tournament{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+/* 各ラウンド */
+
+.round{
+  border-radius:14px;
+  background:#f7f8fa;
+  border:1px solid #e0e3e8;
+  padding:15px;
+}
+
+.round-title{
+  text-align:center;
+  background:#102650;
+  color:white;
+  padding:9px;
+  border-radius:9px;
+  font-weight:bold;
+  margin-bottom:13px;
+}
+
+/* 試合カード */
+
+.match{
+  background:white;
+  border:1px solid #d9dce2;
+  border-radius:10px;
+  overflow:hidden;
+  margin-bottom:12px;
+}
+
+.match:last-child{
+  margin-bottom:0;
+}
+
+.team{
+  padding:11px 12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  min-height:43px;
+}
+
+.team + .team{
+  border-top:1px solid #ddd;
+}
+
+.team-name{
+  font-weight:bold;
+  font-size:14px;
+}
+
+.score{
   font-weight:bold;
   font-size:16px;
 }
 
-.notice{
-  background:#fff9e6;
-  border:1px solid #e2c65a;
-  border-radius:12px;
-  padding:18px;
+.placeholder{
+  color:#999;
+  font-weight:normal;
 }
 
-.notice strong{
-  color:#9a7410;
-}
-
-.bracket{
-  overflow-x:auto;
-}
-
-.bracket table{
-  width:100%;
-  min-width:600px;
-  border-collapse:collapse;
-}
-
-.bracket th{
-  background:#102650;
-  color:white;
-  padding:12px;
-}
-
-.bracket td{
-  border:1px solid #ddd;
-  padding:13px;
+.vs{
   text-align:center;
+  background:#eef0f4;
+  color:#777;
+  font-size:10px;
+  padding:3px;
 }
 
-.bracket tr:nth-child(even){
-  background:#f7f7f7;
+/* 決勝 */
+
+.final{
+  border:2px solid #d4af37;
+  background:#fffdf4;
 }
+
+.final .round-title{
+  background:linear-gradient(135deg,#9d7a18,#d4af37);
+}
+
+/* 結果 */
 
 .result{
+  background:#f7f8fa;
   border-left:5px solid #d4af37;
-  background:#f8f9fb;
-  padding:15px;
   border-radius:10px;
+  padding:14px;
   margin-bottom:12px;
 }
 
-.result .date{
-  font-size:12px;
-  color:#777;
+.result:last-child{
+  margin-bottom:0;
 }
 
-.result .teams{
-  font-size:17px;
+.result-date{
+  color:#777;
+  font-size:12px;
+}
+
+.result-teams{
   font-weight:bold;
+  font-size:16px;
   margin-top:5px;
 }
 
+/* 表彰 */
+
 .awards{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:1fr 1fr;
   gap:12px;
 }
 
 .award{
-  padding:18px;
-  border-radius:12px;
   background:#f7f8fa;
-  border:1px solid #e4e6ea;
+  border:1px solid #e0e3e8;
+  border-radius:12px;
+  padding:17px;
 }
 
 .award strong{
   color:#9a7410;
 }
+
+/* 戻る */
 
 .back{
   text-align:center;
@@ -234,7 +284,7 @@ nav a:hover{
 
 footer{
   background:#07152f;
-  color:#fff;
+  color:white;
   text-align:center;
   padding:25px 15px;
   font-size:12px;
@@ -244,10 +294,17 @@ footer .gold{
   color:#d4af37;
 }
 
+/* スマホ */
+
 @media(max-width:600px){
-  .info,
-  .awards{
-    grid-template-columns:1fr;
+
+  .container{
+    padding-left:10px;
+    padding-right:10px;
+  }
+
+  .section{
+    padding:15px;
   }
 
   header h1{
@@ -255,12 +312,13 @@ footer .gold{
   }
 
   .hero h2{
-    font-size:23px;
+    font-size:24px;
   }
 
-  .section{
-    padding:18px;
+  .awards{
+    grid-template-columns:1fr;
   }
+
 }
 </style>
 </head>
@@ -287,76 +345,315 @@ footer .gold{
 
   <div class="hero">
     <div class="gold">50TH ANNIVERSARY</div>
-    <h2>大会情報</h2>
+    <h2>🏆 大会情報</h2>
     <p>常盤少年野球クラブ創立50周年記念大会</p>
     <p>2027年11月 開催予定</p>
-    <div class="status">⚾ 大会準備中</div>
   </div>
 
   <div class="section">
-    <h3>🏆 大会基本情報</h3>
 
-    <div class="info">
-
-      <div class="card">
-        <div class="label">大会名</div>
-        <div class="value">常盤少年野球クラブ<br>創立50周年記念大会</div>
-      </div>
-
-      <div class="card">
-        <div class="label">開催時期</div>
-        <div class="value">2027年11月予定</div>
-      </div>
-
-      <div class="card">
-        <div class="label">開催場所</div>
-        <div class="value">決定次第掲載</div>
-      </div>
-
-      <div class="card">
-        <div class="label">参加チーム</div>
-        <div class="value">決定次第掲載</div>
-      </div>
-
+    <div class="tournament-title">
+      <strong>⚾ 組み合わせ</strong>
+      <span>TOURNAMENT</span>
     </div>
-  </div>
 
-  <div class="section">
-    <h3>📋 組み合わせ</h3>
-
-    <div class="notice">
-      <strong>大会組み合わせは現在準備中です。</strong>
+    <div class="status">
+      <strong>大会組み合わせは準備中です</strong>
       <br><br>
-      参加チーム決定後、組み合わせ表を掲載します。
+      参加チーム決定後、チーム名を掲載します。
     </div>
+
   </div>
 
-  <div class="section">
-    <h3>📅 試合日程</h3>
 
-    <div class="notice">
-      <strong>試合日程は決定次第掲載します。</strong>
-      <br><br>
-      開催日・試合時間・会場などの詳細を順次お知らせします。
+  <!-- 1回戦 -->
+
+  <div class="section">
+
+    <div class="round">
+      <div class="round-title">1回戦</div>
+
+      <div class="match">
+        <div class="team">
+          <span class="team-name placeholder">チーム01</span>
+          <span class="score">－</span>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="team">
+          <span class="team-name placeholder">チーム02</span>
+          <span class="score">－</span>
+        </div>
+      </div>
+
+
+      <div class="match">
+        <div class="team">
+          <span class="team-name placeholder">チーム03</span>
+          <span class="score">－</span>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="team">
+          <span class="team-name placeholder">チーム04</span>
+          <span class="score">－</span>
+        </div>
+      </div>
+
+
+      <div class="match">
+        <div class="team">
+          <span class="team-name placeholder">チーム05</span>
+          <span class="score">－</span>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="team">
+          <span class="team-name placeholder">チーム06</span>
+          <span class="score">－</span>
+        </div>
+      </div>
+
+
+      <div class="match">
+        <div class="team">
+          <span class="team-name placeholder">チーム07</span>
+          <span class="score">－</span>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="team">
+          <span class="team-name placeholder">チーム08</span>
+          <span class="score">－</span>
+        </div>
+      </div>
+
+
+      <div class="match">
+        <div class="team">
+          <span class="team-name placeholder">チーム09</span>
+          <span class="score">－</span>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="team">
+          <span class="team-name placeholder">チーム10</span>
+          <span class="score">－</span>
+        </div>
+      </div>
+
+
+      <div class="match">
+        <div class="team">
+          <span class="team-name placeholder">チーム11</span>
+          <span class="score">－</span>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="team">
+          <span class="team-name placeholder">チーム12</span>
+          <span class="score">－</span>
+        </div>
+      </div>
+
+
+      <div class="match">
+        <div class="team">
+          <span class="team-name placeholder">チーム13</span>
+          <span class="score">－</span>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="team">
+          <span class="team-name placeholder">チーム14</span>
+          <span class="score">－</span>
+        </div>
+      </div>
+
+
+      <div class="match">
+        <div class="team">
+          <span class="team-name placeholder">チーム15</span>
+          <span class="score">－</span>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="team">
+          <span class="team-name placeholder">チーム16</span>
+          <span class="score">－</span>
+        </div>
+      </div>
+
     </div>
+
   </div>
 
+
+  <!-- 準々決勝 -->
+
   <div class="section">
+
+    <div class="round">
+      <div class="round-title">準々決勝</div>
+
+      <div class="match">
+        <div class="team">
+          <span class="team-name placeholder">勝者①</span>
+          <span class="score">－</span>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="team">
+          <span class="team-name placeholder">勝者②</span>
+          <span class="score">－</span>
+        </div>
+      </div>
+
+      <div class="match">
+        <div class="team">
+          <span class="team-name placeholder">勝者③</span>
+          <span class="score">－</span>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="team">
+          <span class="team-name placeholder">勝者④</span>
+          <span class="score">－</span>
+        </div>
+      </div>
+
+      <div class="match">
+        <div class="team">
+          <span class="team-name placeholder">勝者⑤</span>
+          <span class="score">－</span>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="team">
+          <span class="team-name placeholder">勝者⑥</span>
+          <span class="score">－</span>
+        </div>
+      </div>
+
+      <div class="match">
+        <div class="team">
+          <span class="team-name placeholder">勝者⑦</span>
+          <span class="score">－</span>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="team">
+          <span class="team-name placeholder">勝者⑧</span>
+          <span class="score">－</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- 準決勝 -->
+
+  <div class="section">
+
+    <div class="round">
+      <div class="round-title">準決勝</div>
+
+      <div class="match">
+        <div class="team">
+          <span class="team-name placeholder">準々決勝 勝者</span>
+          <span class="score">－</span>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="team">
+          <span class="team-name placeholder">準々決勝 勝者</span>
+          <span class="score">－</span>
+        </div>
+      </div>
+
+      <div class="match">
+        <div class="team">
+          <span class="team-name placeholder">準々決勝 勝者</span>
+          <span class="score">－</span>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="team">
+          <span class="team-name placeholder">準々決勝 勝者</span>
+          <span class="score">－</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- 決勝 -->
+
+  <div class="section">
+
+    <div class="round final">
+
+      <div class="round-title">🏆 決勝</div>
+
+      <div class="match">
+
+        <div class="team">
+          <span class="team-name placeholder">準決勝 勝者</span>
+          <span class="score">－</span>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="team">
+          <span class="team-name placeholder">準決勝 勝者</span>
+          <span class="score">－</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- 試合結果 -->
+
+  <div class="section">
+
     <h3>⚾ 試合結果</h3>
 
     <div class="result">
-      <div class="date">2027年11月予定</div>
-      <div class="teams">大会開催後、試合結果を掲載します</div>
-    </div>
-
-    <div class="result">
-      <div class="date">RESULT</div>
-      <div class="teams">勝ち上がり・決勝結果を掲載予定</div>
+      <div class="result-date">2027年11月予定</div>
+      <div class="result-teams">
+        大会開催後、試合結果を掲載します
+      </div>
     </div>
 
   </div>
 
+
+  <!-- 表彰 -->
+
   <div class="section">
+
     <h3>🥇 大会表彰</h3>
 
     <div class="awards">
@@ -386,16 +683,9 @@ footer .gold{
       </div>
 
     </div>
+
   </div>
 
-  <div class="section">
-    <h3>📢 お知らせ</h3>
-
-    <div class="notice">
-      大会に関する最新情報は、
-      <strong>「お知らせ」</strong>ページでも随時更新します。
-    </div>
-  </div>
 
   <div class="back">
     <a href="index.html">← トップページへ戻る</a>
@@ -403,10 +693,17 @@ footer .gold{
 
 </div>
 
+
 <footer>
-  <div class="gold">常盤少年野球クラブ</div>
+
+  <div class="gold">
+    常盤少年野球クラブ
+  </div>
+
   創立50周年記念大会<br>
+
   「50年の想いを、次の世代へ。」
+
 </footer>
 
 </body>
