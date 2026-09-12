@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>常盤少年野球クラブ 創立50周年記念大会</title>
 
 <style>
@@ -18,310 +17,552 @@ html{
 }
 
 body{
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Helvetica Neue",
-    "Hiragino Kaku Gothic ProN",
-    "Yu Gothic",
-    sans-serif;
-  background:#f3f5f8;
-  color:#172033;
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Noto Sans JP",sans-serif;
+  background:#06152b;
+  color:#fff;
   line-height:1.7;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* ===== HEADER ===== */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(4,17,38,.96);
+  border-bottom:1px solid rgba(212,175,55,.45);
+  backdrop-filter:blur(10px);
+}
+
+.header-inner{
+  max-width:1100px;
+  margin:auto;
+  padding:12px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-weight:900;
+  letter-spacing:.08em;
+  font-size:15px;
+  color:#fff;
+}
+
+.logo span{
+  display:block;
+  color:#d8b34a;
+  font-size:11px;
+  letter-spacing:.15em;
+}
+
+.menu{
+  display:flex;
+  gap:18px;
+  overflow-x:auto;
+  white-space:nowrap;
+  font-size:12px;
+}
+
+.menu a{
+  color:#ddd;
+}
+
+.menu a:hover{
+  color:#d8b34a;
 }
 
 /* ===== HERO ===== */
 
 .hero{
-  min-height:620px;
-  background:
-    linear-gradient(
-      rgba(3,18,48,.88),
-      rgba(3,18,48,.94)
-    );
-  color:white;
+  position:relative;
+  min-height:650px;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:70px 20px;
-  border-bottom:6px solid #c9a227;
-  position:relative;
   overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 25%,rgba(212,175,55,.18),transparent 30%),
+    linear-gradient(180deg,#081b38 0%,#06152b 65%,#030d1c 100%);
 }
 
-.hero::before{
-  content:"50";
+.hero:before{
+  content:"";
   position:absolute;
-  font-size:420px;
-  font-weight:900;
-  color:rgba(255,255,255,.035);
-  line-height:1;
-  right:-40px;
-  bottom:-100px;
+  inset:0;
+  background:
+    linear-gradient(115deg,transparent 48%,rgba(255,255,255,.035) 49%,transparent 50%),
+    linear-gradient(65deg,transparent 48%,rgba(255,255,255,.025) 49%,transparent 50%);
+  background-size:180px 180px;
 }
 
 .hero-content{
   position:relative;
-  z-index:1;
-  max-width:900px;
+  z-index:2;
+  padding:70px 20px;
 }
 
-.club-name{
-  font-size:15px;
-  letter-spacing:5px;
-  color:#d9bd58;
-  margin-bottom:22px;
+.badge{
+  display:inline-block;
+  padding:7px 18px;
+  border:1px solid #d8b34a;
+  color:#d8b34a;
+  border-radius:30px;
+  font-size:12px;
   font-weight:bold;
+  letter-spacing:.18em;
+  margin-bottom:22px;
 }
 
 .hero h1{
-  font-size:clamp(38px,9vw,72px);
+  font-size:clamp(32px,9vw,70px);
   line-height:1.15;
-  letter-spacing:2px;
-  margin-bottom:25px;
+  font-weight:900;
+  letter-spacing:.04em;
 }
 
-.hero h1 span{
-  color:#d9bd58;
+.hero h1 small{
+  display:block;
+  font-size:.48em;
+  color:#d8b34a;
+  letter-spacing:.12em;
+  margin-bottom:8px;
 }
 
 .catch{
-  font-size:clamp(20px,4.5vw,32px);
-  font-weight:bold;
-  margin-bottom:28px;
+  margin-top:24px;
+  font-size:clamp(20px,5vw,34px);
+  font-weight:800;
+  letter-spacing:.08em;
+}
+
+.catch:before,
+.catch:after{
+  content:"";
+  display:inline-block;
+  width:35px;
+  height:1px;
+  background:#d8b34a;
+  vertical-align:middle;
+  margin:0 12px;
 }
 
 .date{
-  display:inline-block;
-  border:1px solid #d9bd58;
-  border-radius:40px;
-  padding:9px 25px;
-  color:white;
-  font-weight:bold;
+  margin-top:25px;
+  color:#ddd;
+  font-size:15px;
 }
 
-.hero-button{
-  display:inline-block;
+.date strong{
+  color:#fff;
+  font-size:21px;
+}
+
+.hero-buttons{
   margin-top:35px;
-  padding:14px 32px;
-  background:#d9bd58;
-  color:#061a3b;
-  text-decoration:none;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 24px;
+  border-radius:4px;
   font-weight:bold;
-  border-radius:30px;
+  font-size:14px;
   transition:.2s;
 }
 
-.hero-button:hover{
+.btn-gold{
+  background:#d8b34a;
+  color:#06152b;
+}
+
+.btn-dark{
+  border:1px solid rgba(255,255,255,.4);
+  color:#fff;
+}
+
+.btn:hover{
   transform:translateY(-2px);
 }
 
-/* ===== NAV ===== */
+/* ===== GOLD LINE ===== */
 
-nav{
-  position:sticky;
-  top:0;
-  z-index:20;
-  background:white;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  box-shadow:0 2px 10px rgba(0,0,0,.12);
-  border-bottom:1px solid #ddd;
+.gold-line{
+  height:4px;
+  background:linear-gradient(90deg,transparent,#d8b34a,transparent);
 }
 
-nav a{
-  text-decoration:none;
-  color:#071a3d;
-  font-size:14px;
-  font-weight:bold;
-  padding:13px 15px;
-}
-
-/* ===== MAIN ===== */
-
-main{
-  max-width:1050px;
-  margin:auto;
-  padding:40px 15px;
-}
+/* ===== SECTIONS ===== */
 
 section{
-  background:white;
-  margin-bottom:30px;
-  padding:35px 25px;
-  border-radius:14px;
-  box-shadow:0 3px 15px rgba(0,0,0,.07);
+  padding:75px 18px;
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
 }
 
 .section-title{
   text-align:center;
-  margin-bottom:28px;
+  margin-bottom:42px;
 }
 
-.section-title .small{
-  color:#c9a227;
-  font-size:12px;
-  letter-spacing:3px;
-  font-weight:bold;
+.section-title .en{
+  display:block;
+  color:#d8b34a;
+  font-size:11px;
+  letter-spacing:.25em;
+  margin-bottom:7px;
 }
 
 .section-title h2{
-  color:#071a3d;
   font-size:28px;
-  margin-top:5px;
+  font-weight:900;
+}
+
+.section-title p{
+  margin-top:8px;
+  color:#aeb8c7;
+  font-size:13px;
 }
 
 /* ===== COUNTDOWN ===== */
 
-.countdown{
-  background:#071a3d;
-  color:white;
+.countdown-section{
+  background:#071a34;
   text-align:center;
-  padding:35px 20px;
-  border-radius:14px;
-  margin-bottom:30px;
 }
 
-.countdown-title{
-  color:#d9bd58;
-  letter-spacing:3px;
-  font-weight:bold;
-  margin-bottom:12px;
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
 }
 
-#timer{
-  font-size:clamp(24px,6vw,42px);
-  font-weight:900;
-  letter-spacing:2px;
+.time-box{
+  width:78px;
+  padding:13px 5px;
+  border:1px solid rgba(216,179,74,.45);
+  background:rgba(255,255,255,.035);
+  border-radius:6px;
 }
 
-/* ===== NOTICE ===== */
-
-.notice-list{
-  list-style:none;
+.time-box strong{
+  display:block;
+  color:#d8b34a;
+  font-size:25px;
 }
 
-.notice-list li{
-  padding:15px 5px;
-  border-bottom:1px solid #e5e5e5;
-}
-
-.notice-list li:last-child{
-  border-bottom:none;
-}
-
-.notice-date{
-  color:#c39d1d;
-  font-size:13px;
-  font-weight:bold;
-  margin-right:12px;
+.time-box span{
+  color:#9da9bb;
+  font-size:10px;
 }
 
 /* ===== CARDS ===== */
 
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
 }
 
 .card{
-  background:#f2f5f8;
-  padding:25px 20px;
-  border-radius:12px;
+  background:linear-gradient(145deg,#102848,#081a34);
+  border:1px solid rgba(216,179,74,.22);
+  border-radius:8px;
+  padding:25px 18px;
   text-align:center;
-  border-top:4px solid #c9a227;
+  transition:.2s;
 }
 
-.card-icon{
-  font-size:36px;
-  margin-bottom:8px;
+.card:hover{
+  transform:translateY(-4px);
+  border-color:#d8b34a;
+}
+
+.card .icon{
+  font-size:34px;
+  margin-bottom:12px;
 }
 
 .card h3{
-  color:#071a3d;
-  margin-bottom:8px;
+  font-size:17px;
+  margin-bottom:7px;
+}
+
+.card p{
+  color:#aeb8c7;
+  font-size:12px;
+}
+
+/* ===== FEATURE ===== */
+
+.feature{
+  background:
+    linear-gradient(135deg,#081a34,#0b2345);
+}
+
+.feature-box{
+  border:1px solid rgba(216,179,74,.35);
+  padding:35px 25px;
+  border-radius:10px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.feature-box:after{
+  content:"50";
+  position:absolute;
+  right:-15px;
+  bottom:-45px;
+  font-size:180px;
+  font-weight:900;
+  color:rgba(216,179,74,.045);
+}
+
+.feature-box h3{
+  position:relative;
+  z-index:2;
+  color:#d8b34a;
+  font-size:24px;
+}
+
+.feature-box p{
+  position:relative;
+  z-index:2;
+  margin-top:14px;
+  color:#c7d0dc;
+}
+
+/* ===== NEWS ===== */
+
+.news-list{
+  max-width:850px;
+  margin:auto;
+}
+
+.news-item{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  padding:17px 10px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.news-date{
+  color:#d8b34a;
+  font-size:12px;
+  min-width:85px;
+}
+
+.news-item span:last-child{
+  font-size:14px;
 }
 
 /* ===== HISTORY ===== */
 
 .history{
-  text-align:center;
-  background:
-    linear-gradient(
-      135deg,
-      #071a3d,
-      #102b59
-    );
-  color:white;
+  background:#071a34;
 }
 
-.history h2{
-  color:white;
+.history-line{
+  max-width:700px;
+  margin:auto;
+  position:relative;
 }
 
-.history-text{
-  font-size:18px;
-  margin-bottom:15px;
+.history-line:before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:rgba(216,179,74,.4);
+}
+
+.history-item{
+  position:relative;
+  width:50%;
+  padding:12px 35px;
+}
+
+.history-item:nth-child(even){
+  margin-left:50%;
+}
+
+.history-item:after{
+  content:"";
+  position:absolute;
+  top:22px;
+  width:11px;
+  height:11px;
+  background:#d8b34a;
+  border-radius:50%;
+  box-shadow:0 0 0 5px rgba(216,179,74,.12);
+}
+
+.history-item:nth-child(odd):after{
+  right:-6px;
+}
+
+.history-item:nth-child(even):after{
+  left:-5px;
 }
 
 .history-year{
-  color:#d9bd58;
-  font-size:28px;
-  font-weight:bold;
+  color:#d8b34a;
+  font-weight:900;
+  font-size:20px;
+}
+
+.history-item p{
+  color:#b8c3d2;
+  font-size:12px;
+}
+
+/* ===== PHOTO ===== */
+
+.photo-box{
+  min-height:230px;
+  border:1px dashed rgba(216,179,74,.45);
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:30px;
+  background:rgba(255,255,255,.025);
+}
+
+.photo-box strong{
+  display:block;
+  color:#d8b34a;
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.photo-box p{
+  color:#9da9bb;
+  font-size:12px;
+}
+
+/* ===== CTA ===== */
+
+.cta{
+  background:
+    radial-gradient(circle at center,rgba(216,179,74,.13),transparent 45%),
+    #06152b;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:27px;
+  margin-bottom:12px;
+}
+
+.cta p{
+  color:#aeb8c7;
+  font-size:13px;
+  margin-bottom:25px;
 }
 
 /* ===== FOOTER ===== */
 
 footer{
-  background:#061a3b;
-  color:white;
+  border-top:1px solid rgba(216,179,74,.25);
+  padding:35px 18px;
   text-align:center;
-  padding:45px 15px;
-  border-top:5px solid #c9a227;
+  background:#030c19;
 }
 
-footer .gold{
-  color:#d9bd58;
-  font-weight:bold;
+footer strong{
+  display:block;
+  color:#d8b34a;
+  font-size:15px;
+}
+
+footer p{
+  margin-top:8px;
+  color:#697789;
+  font-size:11px;
 }
 
 /* ===== MOBILE ===== */
 
-@media(max-width:600px){
+@media(max-width:700px){
+
+  .header-inner{
+    display:block;
+  }
+
+  .logo{
+    text-align:center;
+    margin-bottom:9px;
+  }
+
+  .menu{
+    justify-content:flex-start;
+    padding-bottom:3px;
+  }
 
   .hero{
-    min-height:560px;
-    padding:55px 15px;
+    min-height:600px;
   }
 
-  .hero::before{
-    font-size:250px;
-    bottom:-40px;
+  .catch:before,
+  .catch:after{
+    width:18px;
+    margin:0 7px;
   }
 
-  .club-name{
-    font-size:11px;
-    letter-spacing:3px;
+  .cards{
+    grid-template-columns:1fr;
   }
 
-  nav a{
-    font-size:11px;
-    padding:9px 7px;
+  .news-item{
+    gap:10px;
+  }
+
+  .news-date{
+    min-width:72px;
+  }
+
+  .history-line:before{
+    left:12px;
+  }
+
+  .history-item,
+  .history-item:nth-child(even){
+    width:100%;
+    margin-left:0;
+    padding-left:40px;
+    padding-right:5px;
+  }
+
+  .history-item:after,
+  .history-item:nth-child(odd):after,
+  .history-item:nth-child(even):after{
+    left:7px;
+    right:auto;
   }
 
   section{
-    padding:28px 17px;
-  }
-
-  .section-title h2{
-    font-size:24px;
-  }
-
-  #timer{
-    font-size:22px;
+    padding:60px 15px;
   }
 }
 </style>
@@ -329,18 +570,38 @@ footer .gold{
 
 <body>
 
-<!-- ===== HERO ===== -->
+<header>
+  <div class="header-inner">
 
-<header class="hero">
+    <div class="logo">
+      常盤少年野球クラブ
+      <span>50TH ANNIVERSARY</span>
+    </div>
+
+    <nav class="menu">
+      <a href="overview.html">大会概要</a>
+      <a href="news.html">お知らせ</a>
+      <a href="teams.html">参加チーム</a>
+      <a href="results.html">大会情報</a>
+      <a href="history.html">50年の歴史</a>
+      <a href="gallery.html">写真</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
 
   <div class="hero-content">
 
-    <div class="club-name">
-      TOKIWA BOYS BASEBALL CLUB
-    </div>
+    <div class="badge">50TH ANNIVERSARY</div>
 
     <h1>
-      創立<span>50周年</span><br>
+      <small>常盤少年野球クラブ</small>
+      創立50周年<br>
       記念大会
     </h1>
 
@@ -349,90 +610,113 @@ footer .gold{
     </div>
 
     <div class="date">
-      2027年11月 開催予定
+      <strong>2027年11月</strong><br>
+      開催予定
     </div>
 
-    <br>
+    <div class="hero-buttons">
+      <a class="btn btn-gold" href="overview.html">大会概要を見る</a>
+      <a class="btn btn-dark" href="history.html">50年の歴史を見る</a>
+    </div>
 
-    <a href="#about" class="hero-button">
-      大会公式サイトへ
+  </div>
+
+</section>
+
+<div class="gold-line"></div>
+
+
+<!-- COUNTDOWN -->
+
+<section class="countdown-section">
+
+  <div class="section-title">
+    <span class="en">COUNTDOWN</span>
+    <h2>50周年記念大会まで</h2>
+    <p>開催日は決定次第お知らせします</p>
+  </div>
+
+  <div class="countdown">
+
+    <div class="time-box">
+      <strong id="days">---</strong>
+      <span>DAY</span>
+    </div>
+
+    <div class="time-box">
+      <strong id="hours">--</strong>
+      <span>HOUR</span>
+    </div>
+
+    <div class="time-box">
+      <strong id="minutes">--</strong>
+      <span>MIN</span>
+    </div>
+
+    <div class="time-box">
+      <strong id="seconds">--</strong>
+      <span>SEC</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section>
+
+  <div class="section-title">
+    <span class="en">TOURNAMENT</span>
+    <h2>大会情報</h2>
+    <p>50周年記念大会の最新情報</p>
+  </div>
+
+  <div class="cards">
+
+    <a class="card" href="overview.html">
+      <div class="icon">🏆</div>
+      <h3>大会概要</h3>
+      <p>大会の日程・会場・開催概要など</p>
+    </a>
+
+    <a class="card" href="teams.html">
+      <div class="icon">⚾</div>
+      <h3>参加チーム</h3>
+      <p>参加チームを決定次第掲載</p>
+    </a>
+
+    <a class="card" href="results.html">
+      <div class="icon">📊</div>
+      <h3>組み合わせ・結果</h3>
+      <p>トーナメント表と試合結果</p>
     </a>
 
   </div>
 
-</header>
+</section>
 
 
-<!-- ===== NAV ===== -->
+<!-- MESSAGE -->
 
-<nav>
+<section class="feature">
 
-  <a href="overview.html">大会概要</a>
-  <a href="#news">お知らせ</a>
-  <a href="#teams">参加チーム</a>
-  <a href="results.html">大会情報</a>
-  <a href="history.html">50年の歴史</a>
-  <a href="#gallery">写真</a>
+  <div class="container">
 
-</nav>
+    <div class="feature-box">
 
+      <h3>50年の歴史を、未来へ。</h3>
 
-<main>
-
-<!-- ===== COUNTDOWN ===== -->
-
-<div class="countdown">
-
-  <div class="countdown-title">
-    50TH ANNIVERSARY TOURNAMENT
-  </div>
-
-  <div id="timer">
-    2027年11月 開催予定
-  </div>
-
-</div>
-
-
-<!-- ===== ABOUT ===== -->
-
-<section id="about">
-
-  <div class="section-title">
-    <div class="small">ABOUT THE TOURNAMENT</div>
-    <h2>大会概要</h2>
-  </div>
-
-  <div class="cards">
-
-    <div class="card">
-      <div class="card-icon">🏆</div>
-      <h3>大会名</h3>
       <p>
-        常盤少年野球クラブ<br>
-        創立50周年記念大会
+        1977年の創立から、50年。<br>
+        多くの子どもたち、指導者、OB・OG、保護者、地域の皆さまに支えられてきました。
+        <br><br>
+        これまでの歩みを振り返り、<br>
+        そして新しい世代へ想いをつないでいく。<br>
+        そんな記念大会を目指します。
       </p>
-    </div>
 
-    <div class="card">
-      <div class="card-icon">📅</div>
-      <h3>開催時期</h3>
-      <p>2027年11月予定</p>
-    </div>
-
-    <div class="card">
-      <div class="card-icon">⚾</div>
-      <h3>開催地</h3>
-      <p>山口県宇部市周辺</p>
-    </div>
-
-    <div class="card">
-      <div class="card-icon">✨</div>
-      <h3>大会テーマ</h3>
-      <p>
-        50年の想いを、<br>
-        次の世代へ。
-      </p>
     </div>
 
   </div>
@@ -440,79 +724,112 @@ footer .gold{
 </section>
 
 
-<!-- ===== NEWS ===== -->
+<!-- NEWS -->
 
-<section id="news">
+<section>
 
   <div class="section-title">
-    <div class="small">NEWS</div>
+    <span class="en">NEWS</span>
     <h2>お知らせ</h2>
+    <p>50周年記念大会の最新情報</p>
   </div>
 
-  <ul class="notice-list">
+  <div class="news-list">
 
-    <li>
-      <span class="notice-date">2026.09</span>
-      50周年記念大会公式サイトを開設しました。
-    </li>
+    <a class="news-item" href="news.html">
+      <span class="news-date">2026.09</span>
+      <span>50周年記念大会 特設サイトを開設しました</span>
+    </a>
 
-    <li>
-      <span class="notice-date">COMING SOON</span>
-      大会詳細情報を順次掲載します。
-    </li>
+    <a class="news-item" href="news.html">
+      <span class="news-date">2027</span>
+      <span>参加チームについて</span>
+    </a>
 
-    <li>
-      <span class="notice-date">COMING SOON</span>
-      参加チーム情報を掲載予定です。
-    </li>
+    <a class="news-item" href="news.html">
+      <span class="news-date">2027</span>
+      <span>大会詳細について</span>
+    </a>
 
-  </ul>
-
-</section>
-
-
-<!-- ===== TEAMS ===== -->
-
-<section id="teams">
-
-  <div class="section-title">
-    <div class="small">TEAMS</div>
-    <h2>参加チーム</h2>
-  </div>
-
-  <div class="notice-list">
-
-    <p style="text-align:center;">
-      参加チームが決まり次第、<br>
-      チーム紹介・写真などを掲載します。
-    </p>
+    <a class="news-item" href="news.html">
+      <span class="news-date">2027.11</span>
+      <span>創立50周年記念大会 開催予定</span>
+    </a>
 
   </div>
 
 </section>
 
 
-<!-- ===== TOURNAMENT ===== -->
+<!-- HISTORY -->
 
-<section id="tournament">
+<section class="history">
 
   <div class="section-title">
-    <div class="small">TOURNAMENT</div>
-    <h2>組み合わせ・試合結果</h2>
+    <span class="en">HISTORY</span>
+    <h2>常盤少年野球クラブ 50年の歩み</h2>
+    <p>1977 → 2027</p>
   </div>
 
-  <div class="cards">
+  <div class="history-line">
 
-    <div class="card">
-      <div class="card-icon">🗂️</div>
-      <h3>組み合わせ</h3>
-      <p>決定後に掲載予定</p>
+    <div class="history-item">
+      <div class="history-year">1977</div>
+      <p>常盤少年野球クラブ 創立</p>
     </div>
 
-    <div class="card">
-      <div class="card-icon">⚾</div>
-      <h3>試合結果</h3>
-      <p>大会当日に更新予定</p>
+    <div class="history-item">
+      <div class="history-year">2016頃</div>
+      <p>宇部日報旗少年野球大会での優勝など、長い歴史を積み重ねる</p>
+    </div>
+
+    <div class="history-item">
+      <div class="history-year">2024</div>
+      <p>高野山旗全国学童軟式野球大会へ</p>
+    </div>
+
+    <div class="history-item">
+      <div class="history-year">2025</div>
+      <p>第50回宇部日報旗少年野球大会 A級優勝</p>
+    </div>
+
+    <div class="history-item">
+      <div class="history-year">2027</div>
+      <p>創立50周年記念大会</p>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;margin-top:35px;">
+    <a class="btn btn-gold" href="history.html">50年の歴史をもっと見る</a>
+  </div>
+
+</section>
+
+
+<!-- PHOTO -->
+
+<section>
+
+  <div class="section-title">
+    <span class="en">PHOTO GALLERY</span>
+    <h2>写真ギャラリー</h2>
+    <p>50年の思い出を未来へ</p>
+  </div>
+
+  <div class="photo-box">
+
+    <div>
+      <strong>📸 思い出の写真を募集中！</strong>
+
+      <p>
+        昔の試合・練習・遠征・卒団式・集合写真など<br>
+        50年の歴史を彩る写真を掲載予定です。
+      </p>
+
+      <div style="margin-top:20px;">
+        <a class="btn btn-gold" href="gallery.html">写真ギャラリーを見る</a>
+      </div>
     </div>
 
   </div>
@@ -520,72 +837,37 @@ footer .gold{
 </section>
 
 
-<!-- ===== HISTORY ===== -->
+<!-- CTA -->
 
-<section id="history" class="history">
+<section class="cta">
 
-  <div class="section-title">
-    <div class="small">50 YEARS HISTORY</div>
-    <h2>50年の歴史</h2>
-  </div>
+  <div class="container">
 
-  <div class="history-text">
-    1977年から始まった歩み。
-  </div>
+    <h2>次の50年へ。</h2>
 
-  <div class="history-year">
-    1977 → 2027
-  </div>
-
-  <p style="margin-top:15px;">
-    これまでの歴史と、<br>
-    未来へつながる想いを紹介していきます。
-  </p>
-
-</section>
-
-
-<!-- ===== GALLERY ===== -->
-
-<section id="gallery">
-
-  <div class="section-title">
-    <div class="small">PHOTO GALLERY</div>
-    <h2>ギャラリー</h2>
-  </div>
-
-  <div class="notice-list">
-
-    <p style="text-align:center;">
-      大会写真や、50年間の思い出の写真を<br>
-      掲載予定です📸
+    <p>
+      常盤少年野球クラブの50年を、<br>
+      みんなで未来へつないでいきましょう。
     </p>
 
+    <a class="btn btn-gold" href="news.html">最新のお知らせ</a>
+
   </div>
 
 </section>
 
-</main>
-
-
-<!-- ===== FOOTER ===== -->
 
 <footer>
 
+  <strong>常盤少年野球クラブ</strong>
+
   <p>
-    常盤少年野球クラブ
+    創立50周年記念大会<br>
+    2027年11月 開催予定
   </p>
 
-  <p class="gold">
-    創立50周年記念大会
-  </p>
-
-  <p style="margin-top:10px;">
-    50年の想いを、次の世代へ。
-  </p>
-
-  <p style="margin-top:25px;font-size:12px;">
-    © TOKIWA BOYS BASEBALL CLUB
+  <p style="margin-top:18px;">
+    © 常盤少年野球クラブ 50周年記念大会
   </p>
 
 </footer>
@@ -593,34 +875,52 @@ footer .gold{
 
 <script>
 
-/* ===== COUNTDOWN ===== */
-/* 開催日が決まったらここを変更します */
+/*
+  開催日はまだ未確定のため、
+  2027年11月1日を仮設定しています。
+  日程が決まったらここだけ変更します。
+*/
 
-const tournamentDate = new Date("2027-11-01T00:00:00+09:00");
+const targetDate = new Date("2027-11-01T00:00:00+09:00").getTime();
 
 function updateCountdown(){
 
-  const now = new Date();
-  const diff = tournamentDate - now;
+  const now = new Date().getTime();
+  const distance = targetDate - now;
 
-  if(diff <= 0){
-    document.getElementById("timer").textContent =
-      "50周年記念大会 開催期間中！";
+  if(distance <= 0){
+    document.getElementById("days").textContent = "50";
+    document.getElementById("hours").textContent = "TH";
+    document.getElementById("minutes").textContent = "AN";
+    document.getElementById("seconds").textContent = "K";
     return;
   }
 
-  const days = Math.floor(
-    diff / (1000 * 60 * 60 * 24)
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24))
+    / (1000 * 60 * 60)
   );
 
-  document.getElementById("timer").textContent =
-    "大会まで あと " + days + " 日";
+  const minutes = Math.floor(
+    (distance % (1000 * 60 * 60))
+    / (1000 * 60)
+  );
 
+  const seconds = Math.floor(
+    (distance % (1000 * 60))
+    / 1000
+  );
+
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = String(hours).padStart(2,"0");
+  document.getElementById("minutes").textContent = String(minutes).padStart(2,"0");
+  document.getElementById("seconds").textContent = String(seconds).padStart(2,"0");
 }
 
 updateCountdown();
-
-setInterval(updateCountdown,60000);
+setInterval(updateCountdown,1000);
 
 </script>
 
