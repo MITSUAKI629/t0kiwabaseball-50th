@@ -197,46 +197,21 @@ footer{
     grid-template-columns:1fr;
   }
 }
+/* チームカードを読みやすくする */
 .team-card {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  padding: 14px;
-  background: rgba(5, 25, 58, 0.97);
-  border: 1px solid #b99a3b;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-
-.team-number {
-  display: inline-block;
-  width: 28px;
-  flex-shrink: 0;
-  text-align: right;
-  color: #d4af37;
-  font-weight: bold;
-}
-
-.team-name {
-  text-align: left;
-}.team-instagram {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 7px 14px;
-  border: 1px solid #d4af37;
-  border-radius: 20px;
-  .team-name {
+  background: rgba(5, 25, 58, 0.98);
   color: #ffffff;
 }
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: bold;
+
+/* チーム名を白く */
+.team-card .team-name {
+  color: #ffffff !important;
 }
 
-.team-instagram:hover {
-  background: #d4af37;
-  color: #06172e;
+/* Instagramボタンの文字をゴールドに */
+.team-card .team-instagram {
+  color: #f0c84b !important;
+}
 }</style>
 </head>
 
