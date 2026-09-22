@@ -86,13 +86,12 @@ header{
 
 .hero{
   position:relative;
-  min-height:650px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  min-height:0;
+  display:block;
   text-align:center;
   overflow:hidden;
-  background:
+  background:#06152b;
+}
     radial-gradient(circle at 50% 25%,rgba(212,175,55,.18),transparent 30%),
     linear-gradient(180deg,#081b38 0%,#06152b 65%,#030d1c 100%);
 }
@@ -524,10 +523,12 @@ footer p{
     padding-bottom:3px;
   }
 
-  .hero{
-    min-height:600px;
-  }
-
+  .hero {
+  width:100%;
+  min-height:0;
+  display:block;
+  padding:0;
+}
   .catch:before,
   .catch:after{
     width:18px;
