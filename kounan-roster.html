@@ -1,1 +1,331 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>常盤クラブ A級 選手名簿｜常盤少年野球クラブ 50周年記念大会</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:#06152b;
+  color:#fff;
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+    "Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  line-height:1.6;
+}
+
+/* ヘッダー */
+.header{
+  background:#071b35;
+  border-bottom:2px solid #d8b34a;
+  padding:18px 15px;
+  text-align:center;
+}
+
+.header .anniversary{
+  color:#d8b34a;
+  font-size:13px;
+  letter-spacing:.18em;
+  font-weight:800;
+}
+
+.header h1{
+  margin:5px 0 0;
+  font-size:22px;
+  letter-spacing:.06em;
+}
+
+/* メイン */
+.container{
+  max-width:720px;
+  margin:0 auto;
+  padding:25px 15px 50px;
+}
+
+/* タイトル */
+.page-title{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.page-title .en{
+  color:#d8b34a;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.2em;
+}
+
+.page-title h2{
+  margin:5px 0;
+  font-size:30px;
+  font-weight:900;
+}
+
+.page-title p{
+  margin:0;
+  color:#bbb;
+  font-size:14px;
+}
+
+/* チーム情報 */
+.team-info{
+  background:linear-gradient(135deg,#0b2345,#081a33);
+  border:1px solid rgba(216,179,74,.5);
+  border-radius:14px;
+  padding:20px;
+  margin-bottom:25px;
+  box-shadow:0 8px 25px rgba(0,0,0,.3);
+}
+
+.team-info-title{
+  color:#d8b34a;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+
+.team-info h3{
+  margin:3px 0 15px;
+  font-size:25px;
+}
+
+.staff{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.staff-box{
+  background:rgba(255,255,255,.05);
+  border-radius:8px;
+  padding:10px;
+}
+
+.staff-box span{
+  display:block;
+  color:#d8b34a;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.staff-box strong{
+  font-size:16px;
+}
+
+/* 名簿 */
+.roster{
+  background:#fff;
+  color:#111;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.roster-header{
+  background:#0b2345;
+  color:#fff;
+  padding:15px;
+  text-align:center;
+  border-bottom:4px solid #d8b34a;
+}
+
+.roster-header strong{
+  font-size:20px;
+  letter-spacing:.08em;
+}
+
+.roster-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.roster-table th{
+  background:#e9edf2;
+  padding:10px 5px;
+  font-size:13px;
+}
+
+.roster-table td{
+  padding:11px 5px;
+  border-bottom:1px solid #ddd;
+  text-align:center;
+  font-size:15px;
+}
+
+.roster-table tr:last-child td{
+  border-bottom:none;
+}
+
+.roster-table .name{
+  text-align:left;
+  font-weight:700;
+}
+
+/* 戻るボタン */
+.back{
+  text-align:center;
+  margin-top:30px;
+}
+
+.back a{
+  display:inline-block;
+  padding:11px 25px;
+  border:1px solid #d8b34a;
+  border-radius:30px;
+  color:#d8b34a;
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* スマホ */
+@media(max-width:480px){
+
+  .page-title h2{
+    font-size:26px;
+  }
+
+  .staff{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .roster-table th,
+  .roster-table td{
+    font-size:13px;
+  }
+
+  .roster-table td{
+    padding:10px 3px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="anniversary">50TH ANNIVERSARY</div>
+  <h1>常盤少年野球クラブ</h1>
+</header>
+
+<main class="container">
+
+  <div class="page-title">
+    <div class="en">TEAM ROSTER</div>
+    <h2>常盤クラブ</h2>
+    <p>A級　選手名簿</p>
+  </div>
+
+  <section class="team-info">
+
+    <div class="team-info-title">TEAM INFORMATION</div>
+
+    <h3>常盤クラブ A級</h3>
+
+    <div class="staff">
+
+      <div class="staff-box">
+        <span>代表者</span>
+        <strong>代表者名</strong>
+      </div>
+
+      <div class="staff-box">
+        <span>監督</span>
+        <strong>監督名</strong>
+      </div>
+
+      <div class="staff-box">
+        <span>コーチ</span>
+        <strong>コーチ名</strong>
+      </div>
+
+      <div class="staff-box">
+        <span>登録人数</span>
+        <strong>○○名</strong>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="roster">
+
+    <div class="roster-header">
+      <strong>PLAYER ROSTER</strong>
+    </div>
+
+    <table class="roster-table">
+
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>背番号</th>
+          <th>学年</th>
+          <th>選手名</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>01</td>
+          <td>10</td>
+          <td>6年</td>
+          <td class="name">選手名①</td>
+        </tr>
+
+        <tr>
+          <td>02</td>
+          <td>1</td>
+          <td>6年</td>
+          <td class="name">選手名②</td>
+        </tr>
+
+        <tr>
+          <td>03</td>
+          <td>2</td>
+          <td>5年</td>
+          <td class="name">選手名③</td>
+        </tr>
+
+        <tr>
+          <td>04</td>
+          <td>3</td>
+          <td>5年</td>
+          <td class="name">選手名④</td>
+        </tr>
+
+        <tr>
+          <td>05</td>
+          <td>4</td>
+          <td>5年</td>
+          <td class="name">選手名⑤</td>
+        </tr>
+
+        <tr>
+          <td>06</td>
+          <td>5</td>
+          <td>4年</td>
+          <td class="name">選手名⑥</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </section>
+
+  <div class="back">
+    <a href="teams.html">← 参加チームへ戻る</a>
+  </div>
+
+</main>
+
+</body>
+</html>
 
