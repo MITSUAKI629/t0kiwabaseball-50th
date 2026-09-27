@@ -11,325 +11,621 @@
   box-sizing:border-box;
 }
 
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",
-  "Yu Gothic",sans-serif;
-  background:#f5f6f8;
-  color:#172033;
+html{
+  scroll-behavior:smooth;
 }
 
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,
+  "Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  background:#06152b;
+  color:#fff;
+  line-height:1.7;
+}
+
+/* ====================
+   HEADER
+==================== */
+
 header{
-  background:linear-gradient(135deg,#07152f,#102d5a);
-  color:white;
+  background:
+    radial-gradient(circle at top,#173d72 0%,#0a2345 45%,#06152b 100%);
   text-align:center;
-  padding:35px 20px;
-  border-bottom:4px solid #d4af37;
+  padding:42px 20px 35px;
+  border-bottom:2px solid #d8b34a;
 }
 
 .badge{
   display:inline-block;
-  border:1px solid #d4af37;
-  color:#d4af37;
-  padding:6px 14px;
+  color:#d8b34a;
+  border:1px solid #d8b34a;
+  padding:6px 16px;
   border-radius:30px;
-  font-size:13px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.18em;
   margin-bottom:12px;
 }
 
-h1{
+header h1{
   margin:5px 0;
-  font-size:26px;
+  font-size:28px;
+  font-weight:900;
+  letter-spacing:.04em;
 }
 
 .subtitle{
   color:#eee;
-  margin-top:8px;
+  font-size:16px;
+  font-weight:700;
 }
 
+.catch{
+  margin-top:14px;
+  color:#d8b34a;
+  font-weight:900;
+  font-size:17px;
+  letter-spacing:.08em;
+}
+
+/* ====================
+   NAV
+==================== */
+
 nav{
-  background:#06142d;
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  padding:12px;
   position:sticky;
   top:0;
-  z-index:10;
+  z-index:20;
+
+  display:flex;
+  justify-content:flex-start;
+  gap:6px;
+
+  width:100%;
   overflow-x:auto;
+  white-space:nowrap;
+
+  background:rgba(3,13,29,.97);
+  border-bottom:1px solid rgba(216,179,74,.35);
+
+  padding:10px 12px;
+
+  -webkit-overflow-scrolling:touch;
 }
 
 nav a{
-  color:white;
+  flex-shrink:0;
+
+  color:#fff;
   text-decoration:none;
+
   font-size:13px;
-  white-space:nowrap;
-  padding:7px 10px;
+  font-weight:700;
+
+  padding:8px 12px;
+  border-radius:20px;
 }
 
 nav a:hover{
-  color:#d4af37;
+  color:#d8b34a;
+  background:rgba(216,179,74,.08);
 }
+
+/* ====================
+   MAIN
+==================== */
 
 .container{
   max-width:850px;
-  margin:auto;
-  padding:30px 15px 60px;
+  margin:0 auto;
+  padding:40px 16px 70px;
 }
+
+/* ====================
+   PAGE TITLE
+==================== */
 
 .title{
   text-align:center;
-  margin-bottom:25px;
+  margin-bottom:35px;
+}
+
+.title .en{
+  color:#d8b34a;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.2em;
 }
 
 .title h2{
-  margin-bottom:7px;
+  margin:6px 0 8px;
+  font-size:34px;
+  font-weight:900;
 }
 
 .title p{
-  color:#777;
+  margin:0;
+  color:#bfc8d6;
   font-size:14px;
 }
 
+/* ====================
+   NEWS CARD
+==================== */
+
 .news{
-  background:white;
+  position:relative;
+
+  background:
+    linear-gradient(135deg,
+      rgba(17,50,91,.98),
+      rgba(7,25,51,.98));
+
+  border:1px solid rgba(216,179,74,.35);
+  border-left:5px solid #d8b34a;
+
   border-radius:16px;
-  padding:20px;
-  margin-bottom:16px;
-  box-shadow:0 4px 15px rgba(0,0,0,.07);
-  border-left:5px solid #d4af37;
+
+  padding:22px 20px;
+
+  margin-bottom:18px;
+
+  box-shadow:0 10px 28px rgba(0,0,0,.25);
+
+  transition:.2s;
+}
+
+.news:hover{
+  transform:translateY(-2px);
+  border-color:rgba(216,179,74,.75);
 }
 
 .date{
-  color:#b08b18;
+  color:#d8b34a;
   font-size:13px;
-  font-weight:bold;
-  margin-bottom:8px;
-}
-
-.news h3{
-  margin:5px 0 10px;
-  color:#102d5a;
-  font-size:18px;
-}
-
-.news p{
-  margin:0;
-  line-height:1.8;
-  font-size:14px;
+  font-weight:900;
+  margin-bottom:7px;
 }
 
 .tag{
   display:inline-block;
-  background:#102d5a;
-  color:white;
-  padding:4px 9px;
+
+  background:#d8b34a;
+  color:#071b35;
+
+  padding:4px 10px;
+
   border-radius:20px;
+
   font-size:11px;
+  font-weight:900;
+
   margin-bottom:8px;
 }
 
+.news h3{
+  margin:4px 0 10px;
+
+  color:#fff;
+
+  font-size:19px;
+  font-weight:900;
+
+  line-height:1.5;
+}
+
+.news p{
+  margin:0;
+
+  color:#e5e9ef;
+
+  font-size:14px;
+  line-height:1.8;
+}
+
+/* NEW表示 */
+
+.new{
+  position:absolute;
+
+  top:16px;
+  right:16px;
+
+  background:#d8b34a;
+  color:#071b35;
+
+  font-size:10px;
+  font-weight:900;
+
+  padding:4px 8px;
+
+  border-radius:20px;
+
+  letter-spacing:.05em;
+}
+
+/* ====================
+   PHOTO BUTTON
+==================== */
+
+.photo-button{
+  margin-top:16px;
+}
+
+.photo-button a{
+  display:inline-block;
+
+  background:#d8b34a;
+  color:#071b35;
+
+  text-decoration:none;
+
+  padding:11px 18px;
+
+  border-radius:28px;
+
+  font-size:14px;
+  font-weight:900;
+
+  box-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+.photo-button a:hover{
+  opacity:.85;
+}
+
+/* ====================
+   BACK BUTTON
+==================== */
+
 .back{
   display:block;
-  width:220px;
-  margin:30px auto 0;
+
+  width:230px;
+
+  margin:40px auto 0;
+
   text-align:center;
-  background:#102d5a;
-  color:white;
+
+  border:1px solid #d8b34a;
+
+  color:#d8b34a;
+
   text-decoration:none;
+
   padding:13px;
+
   border-radius:30px;
-  font-weight:bold;
+
+  font-weight:800;
+
+  background:rgba(216,179,74,.05);
 }
+
+.back:hover{
+  background:#d8b34a;
+  color:#071b35;
+}
+
+/* ====================
+   FOOTER
+==================== */
 
 footer{
-  background:#06142d;
-  color:#bbb;
+  background:#030d1d;
+
+  color:#9da8b8;
+
   text-align:center;
-  padding:25px 15px;
+
+  padding:28px 15px;
+
   font-size:12px;
+
+  border-top:1px solid rgba(216,179,74,.25);
 }
 
+/* ====================
+   MOBILE
+==================== */
+
 @media(max-width:600px){
-  h1{
+
+  header{
+    padding:35px 16px 28px;
+  }
+
+  header h1{
     font-size:23px;
   }
 
+  .subtitle{
+    font-size:15px;
+  }
+
+  .catch{
+    font-size:15px;
+  }
+
   .container{
-    padding:25px 12px 50px;
+    padding:30px 12px 55px;
+  }
+
+  .title h2{
+    font-size:29px;
   }
 
   .news{
-    padding:18px 15px;
+    padding:20px 16px;
   }
+
+  .news h3{
+    font-size:17px;
+  }
+
+  .new{
+    top:14px;
+    right:14px;
+  }
+
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 
-<div class="badge">50TH ANNIVERSARY</div>
+  <div class="badge">
+    50TH ANNIVERSARY
+  </div>
 
-<h1>常盤少年野球クラブ</h1>
+  <h1>
+    常盤少年野球クラブ
+  </h1>
 
-<div class="subtitle">
-創立50周年記念大会
-</div>
+  <div class="subtitle">
+    創立50周年記念大会
+  </div>
 
-<p style="color:#d4af37;font-weight:bold;">
-50年の想いを、次の世代へ。
-</p>
+  <div class="catch">
+    50年の想いを、次の世代へ。
+  </div>
 
 </header>
 
 
+<!-- NAV -->
+
 <nav>
 
-<a href="index.html">トップ</a>
+  <a href="index.html">トップ</a>
 
-<a href="overview.html">大会概要</a>
+  <a href="overview.html">大会概要</a>
 
-<a href="news.html">お知らせ</a>
+  <a href="news.html">お知らせ</a>
 
-<a href="history.html">50年の歴史</a>
+  <a href="teams.html">参加チーム</a>
 
-<a href="gallery.html">写真</a>
+  <a href="rules.html">大会ルール</a>
+
+  <a href="results.html">大会情報</a>
+
+  <a href="history.html">50年の歴史</a>
+
+  <a href="gallery.html">写真</a>
 
 </nav>
 
 
+<!-- MAIN -->
+
 <main class="container">
 
-<div class="title">
 
-<h2>📢 お知らせ</h2>
+  <!-- TITLE -->
 
-<p>
-創立50周年記念大会に関する最新情報をお知らせします。
-</p>
+  <div class="title">
 
-</div>
+    <div class="en">
+      NEWS
+    </div>
 
+    <h2>
+      📢 お知らせ
+    </h2>
 
-<div class="news">
+    <p>
+      創立50周年記念大会に関する最新情報をお知らせします。
+    </p>
 
-<div class="date">2026年9月</div>
-
-<span class="tag">大会準備</span>
-
-<h3>50周年記念大会 特設サイトを開設しました</h3>
-
-<p>
-常盤少年野球クラブ創立50周年記念大会の
-公式サイトを開設しました。
-</p>
-
-<p style="margin-top:10px;">
-大会に関する情報を順次更新していきます。
-</p>
-
-</div>
+  </div>
 
 
-<div class="news">
+  <!-- NEWS 01 -->
 
-<div class="date">2027年</div>
+  <article class="news">
 
-<span class="tag">参加チーム</span>
+    <span class="new">
+      NEW
+    </span>
 
-<h3>参加チームについて</h3>
+    <div class="date">
+      2026年9月
+    </div>
 
-<p>
-参加チームが決まり次第、こちらでお知らせします。
-</p>
+    <span class="tag">
+      大会準備
+    </span>
 
-</div>
+    <h3>
+      50周年記念大会 特設サイトを開設しました
+    </h3>
 
+    <p>
+      常盤少年野球クラブ創立50周年記念大会の
+      公式サイトを開設しました。
+    </p>
 
-<div class="news">
+    <p style="margin-top:10px;">
+      大会に関する情報を順次更新していきます。
+    </p>
 
-<div class="date">2027年</div>
-
-<span class="tag">大会情報</span>
-
-<h3>大会詳細について</h3>
-
-<p>
-開催日、会場、試合方式、組み合わせなどの
-詳細が決まり次第、順次掲載します。
-</p>
-
-</div>
-
-
-<div class="news">
-
-<div class="date">2027年11月予定</div>
-
-<span class="tag">50周年</span>
-
-<h3>創立50周年記念大会 開催予定</h3>
-
-<p>
-常盤少年野球クラブ創立50周年を記念する大会を
-2027年11月に開催予定です。
-</p>
-
-</div>
+  </article>
 
 
-<div class="news">
+  <!-- NEWS 02 -->
 
-<div class="date">随時更新</div>
+  <article class="news">
 
-<span class="tag">写真</span>
+    <div class="date">
+      2026年9月
+    </div>
 
-<h3>50周年記念写真を募集しています</h3>
+    <span class="tag">
+      写真
+    </span>
 
-<p>
-これまでの活動写真、試合、練習、遠征、
-卒団式、集合写真などを募集しています。
-</p>
+    <h3>
+      50周年記念写真の募集を開始しました
+    </h3>
 
-<p style="margin-top:10px;">
-思い出の写真がありましたら、ぜひお寄せください。
-</p>
+    <p>
+      常盤少年野球クラブのこれまでの活動や、
+      試合・練習・遠征・卒団式・集合写真など、
+      50周年の記念となる写真を募集しています。
+    </p>
 
-</div>
+    <div class="photo-button">
 
+      <a href="photo-recruit.html">
+        📸 写真を投稿する
+      </a>
 
-<div class="news">
+    </div>
 
-<div class="date">大会開催後</div>
-
-<span class="tag">試合結果</span>
-
-<h3>大会結果を掲載予定</h3>
-
-<p>
-大会終了後、組み合わせや試合結果、
-大会の様子を掲載する予定です。
-</p>
-
-</div>
+  </article>
 
 
-<a class="back" href="index.html">
-← トップページへ戻る
-</a>
+  <!-- NEWS 03 -->
+
+  <article class="news">
+
+    <div class="date">
+      2027年
+    </div>
+
+    <span class="tag">
+      参加チーム
+    </span>
+
+    <h3>
+      参加チームについて
+    </h3>
+
+    <p>
+      参加チームが決まり次第、
+      こちらでお知らせします。
+    </p>
+
+  </article>
+
+
+  <!-- NEWS 04 -->
+
+  <article class="news">
+
+    <div class="date">
+      2027年
+    </div>
+
+    <span class="tag">
+      大会情報
+    </span>
+
+    <h3>
+      大会詳細について
+    </h3>
+
+    <p>
+      開催日、会場、試合方式、組み合わせなどの
+      詳細が決まり次第、順次掲載します。
+    </p>
+
+  </article>
+
+
+  <!-- NEWS 05 -->
+
+  <article class="news">
+
+    <div class="date">
+      2027年11月予定
+    </div>
+
+    <span class="tag">
+      50周年
+    </span>
+
+    <h3>
+      創立50周年記念大会 開催予定
+    </h3>
+
+    <p>
+      常盤少年野球クラブ創立50周年を記念する大会を
+      2027年11月に開催予定です。
+    </p>
+
+  </article>
+
+
+  <!-- NEWS 06 -->
+
+  <article class="news">
+
+    <div class="date">
+      大会開催後
+    </div>
+
+    <span class="tag">
+      試合結果
+    </span>
+
+    <h3>
+      大会結果を掲載予定
+    </h3>
+
+    <p>
+      大会終了後、組み合わせや試合結果、
+      大会の様子を掲載する予定です。
+    </p>
+
+  </article>
+
+
+  <!-- BACK -->
+
+  <a class="back" href="index.html">
+    ← トップページへ戻る
+  </a>
+
 
 </main>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-常盤少年野球クラブ 創立50周年記念大会<br>
+  常盤少年野球クラブ 創立50周年記念大会<br>
 
-© 2027 Tokiwa Baseball Club
+  50年の想いを、次の世代へ。
 
 </footer>
+
 
 </body>
 </html>
