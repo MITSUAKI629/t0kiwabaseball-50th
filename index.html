@@ -90,11 +90,21 @@ header{
   display:block;
   text-align:center;
   overflow:hidden;
-  background:#06152b;
-}
+  background:
     radial-gradient(circle at 50% 25%,rgba(212,175,55,.18),transparent 30%),
     linear-gradient(180deg,#081b38 0%,#06152b 65%,#030d1c 100%);
 }
+
+.hero-banner{
+  position:relative;
+  z-index:1;
+  display:block;
+  width:100%;
+  max-width:none;
+  height:auto;
+  margin:0 auto;
+}
+
 
 .hero:before{
   content:"";
@@ -686,39 +696,53 @@ footer p{
 </section>
 
 <div class="gold-line"></div>
-<div class="gold-line"></div>
 
 
-<!-- COUNTDOWN -->
+<!-- EVENT STATUS -->
 
 <section class="countdown-section">
 
   <div class="section-title">
-    <span class="en">COUNTDOWN</span>
-    <h2>50周年記念大会まで</h2>
-    <p>開催日は決定次第お知らせします</p>
+    <span class="en">50TH ANNIVERSARY</span>
+    <h2>50周年記念大会</h2>
+    <p>2027年11月 開催予定</p>
   </div>
 
-  <div class="countdown">
+  <div style="text-align:center;">
 
-    <div class="time-box">
-      <strong id="days">---</strong>
-      <span>DAY</span>
-    </div>
+    <div style="
+      display:inline-block;
+      padding:18px 30px;
+      border:1px solid rgba(216,179,74,.5);
+      border-radius:8px;
+      background:rgba(255,255,255,.035);
+    ">
 
-    <div class="time-box">
-      <strong id="hours">--</strong>
-      <span>HOUR</span>
-    </div>
+      <div style="
+        color:#d8b34a;
+        font-size:13px;
+        letter-spacing:.15em;
+        font-weight:800;
+      ">
+        SCHEDULE
+      </div>
 
-    <div class="time-box">
-      <strong id="minutes">--</strong>
-      <span>MIN</span>
-    </div>
+      <div style="
+        margin-top:5px;
+        font-size:28px;
+        font-weight:900;
+      ">
+        2027年11月
+      </div>
 
-    <div class="time-box">
-      <strong id="seconds">--</strong>
-      <span>SEC</span>
+      <div style="
+        margin-top:3px;
+        color:#aeb8c7;
+        font-size:12px;
+      ">
+        開催予定
+      </div>
+
     </div>
 
   </div>
@@ -890,10 +914,23 @@ footer p{
         50年の歴史を彩る写真を掲載予定です。
       </p>
 
-      <div style="margin-top:20px;">
-        <a class="btn btn-gold" href="gallery.html">写真ギャラリーを見る</a>
-      </div>
-    </div>
+     <div style="
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+">
+
+  <a class="btn btn-gold" href="gallery.html">
+    🖼 写真ギャラリーを見る
+  </a>
+
+  <a class="btn btn-dark" href="photo-recruit.html">
+    📸 写真を投稿する
+  </a>
+
+</div>
 
   </div>
 
