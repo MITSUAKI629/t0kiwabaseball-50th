@@ -973,56 +973,7 @@ footer p{
 </footer>
 
 
-<script>
 
-/*
-  開催日はまだ未確定のため、
-  2027年11月1日を仮設定しています。
-  日程が決まったらここだけ変更します。
-*/
-
-const targetDate = new Date("2027-11-01T00:00:00+09:00").getTime();
-
-function updateCountdown(){
-
-  const now = new Date().getTime();
-  const distance = targetDate - now;
-
-  if(distance <= 0){
-    document.getElementById("days").textContent = "50";
-    document.getElementById("hours").textContent = "TH";
-    document.getElementById("minutes").textContent = "AN";
-    document.getElementById("seconds").textContent = "K";
-    return;
-  }
-
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-  const hours = Math.floor(
-    (distance % (1000 * 60 * 60 * 24))
-    / (1000 * 60 * 60)
-  );
-
-  const minutes = Math.floor(
-    (distance % (1000 * 60 * 60))
-    / (1000 * 60)
-  );
-
-  const seconds = Math.floor(
-    (distance % (1000 * 60))
-    / 1000
-  );
-
-  document.getElementById("days").textContent = days;
-  document.getElementById("hours").textContent = String(hours).padStart(2,"0");
-  document.getElementById("minutes").textContent = String(minutes).padStart(2,"0");
-  document.getElementById("seconds").textContent = String(seconds).padStart(2,"0");
-}
-
-updateCountdown();
-setInterval(updateCountdown,1000);
-
-</script>
 
 </body>
 </html>
